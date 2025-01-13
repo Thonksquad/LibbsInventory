@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea7c5f981e3b2f4a97c9a81cb0f86d4, type: 3}
   m_Name: Large HP Potion
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 00d24408568984f129b7023cb677c0cd, type: 3}
+  Icon: {fileID: -1632333837119469124, guid: dedc86cb70bd04b43bad2d8ba6418e8f, type: 3}
   _nameOverride: 
   Description: Tastes like red
   Rarity: {fileID: 11400000, guid: 8bcf53369b44f0047b14f130b6bfb90f, type: 2}

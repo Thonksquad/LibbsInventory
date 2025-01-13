@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1ae6563e6b5d6419f80a5f97ca364b, type: 3}
   m_Name: Frost Ring
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: d8d614ae22d61457b981ba9abb6212f8, type: 3}
+  Icon: {fileID: -6542662938323947708, guid: b097ec7e317db754996280bf974dea74, type: 3}
   _nameOverride: 
   Description: Slow enemies on attack. Chance of freezing
   Rarity: {fileID: 11400000, guid: 929f5c61b12a8924682440a12578e077, type: 2}

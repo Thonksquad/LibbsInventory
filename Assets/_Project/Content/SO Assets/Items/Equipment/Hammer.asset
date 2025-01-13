@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1ae6563e6b5d6419f80a5f97ca364b, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 453d2da821d4541979732bf6bf666460, type: 3}
+  Icon: {fileID: 781687084792072231, guid: 68e5cf017a913f6478ca3a97677979b0, type: 3}
   _nameOverride: 
   Description: It's hammer time
   Rarity: {fileID: 11400000, guid: 8bcf53369b44f0047b14f130b6bfb90f, type: 2}

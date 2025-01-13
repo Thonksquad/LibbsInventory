@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea7c5f981e3b2f4a97c9a81cb0f86d4, type: 3}
   m_Name: Small HP Potion
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: b247ef8a899ae4425b46bad4a10a76b8, type: 3}
+  Icon: {fileID: 8966945178157639174, guid: 71386f6e62310964dbdec656accf153b, type: 3}
   _nameOverride: 
   Description: 
   Rarity: {fileID: 11400000, guid: 8bcf53369b44f0047b14f130b6bfb90f, type: 2}
