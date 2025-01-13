@@ -58,7 +58,7 @@ namespace InventorySystem
 
         private void Awake()
         {
-            ServiceLocator.Register(this);
+            LibbsServiceLocator.Register(this);
             _draggedTransform = _icon.transform;
             _entry.ItemChanged += OnItemChanged;
             _entry.QuantityChanged += OnQuantityChanged;
@@ -102,9 +102,9 @@ namespace InventorySystem
 
         private void Start()
         {
-            _playerInventory = ServiceLocator.Get<Inventory>();
-            _rightClickMenu = ServiceLocator.Get<ItemEntryMenu>();
-            _confirmationDialog = ServiceLocator.Get<ConfirmationDialog>();
+            _playerInventory = LibbsServiceLocator.Get<Inventory>();
+            _rightClickMenu = LibbsServiceLocator.Get<ItemEntryMenu>();
+            _confirmationDialog = LibbsServiceLocator.Get<ConfirmationDialog>();
         }
 
         private void Update()

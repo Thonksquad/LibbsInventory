@@ -9,7 +9,7 @@ namespace CursorSystem
 
         private CursorController _cursorController;
 
-        private void Start() => _cursorController = ServiceLocator.Get<CursorController>();
+        private void Start() => _cursorController = LibbsServiceLocator.Get<CursorController>();
 
         public void OnPointerEnter(PointerEventData eventData) => _cursorController.ChangeCursor(_hoverCursor);
 

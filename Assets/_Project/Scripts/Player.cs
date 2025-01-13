@@ -13,7 +13,7 @@ namespace SystemsDemo
 
         private void Awake()
         {
-            ServiceLocator.Register(this);
+            LibbsServiceLocator.Register(this);
         }
 
         private void OnEnable()

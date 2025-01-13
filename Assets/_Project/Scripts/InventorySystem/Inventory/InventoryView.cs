@@ -54,7 +54,7 @@ namespace InventorySystem
 
         protected virtual void Start()
         {
-            _confirmationDialog = ServiceLocator.Get<ConfirmationDialog>();
+            _confirmationDialog = LibbsServiceLocator.Get<ConfirmationDialog>();
             if (_inventory != null)
                 BindTo(_inventory);
         }

@@ -31,7 +31,7 @@ namespace InventorySystem
             AdjustSize(inventorySize);
             InitializeItems();
             _isPlayerInventory = isPlayerInventory;
-            if (_isPlayerInventory) ServiceLocator.Register(this);
+            if (_isPlayerInventory) LibbsServiceLocator.Register(this);
         }
 
         #region Initializing Inventory
@@ -67,7 +67,7 @@ namespace InventorySystem
         public void CollectAll()
         {
             if (_isPlayerInventory) return;
-            var playerInventory = ServiceLocator.Get<Inventory>();
+            var playerInventory = LibbsServiceLocator.Get<Inventory>();
 
             foreach (var entry in _items)
             {

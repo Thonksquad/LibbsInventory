@@ -14,7 +14,7 @@ namespace CursorSystem
         private Coroutine _animation;
         private bool _isVisible = true;
 
-        private void Awake() => ServiceLocator.Register(this);
+        private void Awake() => LibbsServiceLocator.Register(this);
 
         private void OnApplicationFocus(bool focus)
         {

@@ -37,7 +37,7 @@ namespace InventorySystem
         public ItemEntryView FocusedSlot => _focusedSlot;
         public bool IsShown => _isShown;
 
-        private void Awake() => ServiceLocator.Register(this);
+        private void Awake() => LibbsServiceLocator.Register(this);
         private void OnEnable() => InventoryView.Closed += OnInventoryClosed;
         private void OnDisable() => InventoryView.Closed -= OnInventoryClosed;
         private void Start() => HideMenu(forced: true);

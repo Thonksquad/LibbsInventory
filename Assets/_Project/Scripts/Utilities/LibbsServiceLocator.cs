@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-public static class ServiceLocator
+public static class LibbsServiceLocator
 {
     private static readonly Dictionary<Type, object> _services = new();
 

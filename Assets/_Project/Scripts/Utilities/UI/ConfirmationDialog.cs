@@ -31,7 +31,7 @@ namespace Utilities.UI
         private string _currentBypassGroup;
         private bool _bypassDisplayed;
 
-        private void Awake() => ServiceLocator.Register(this);
+        private void Awake() => LibbsServiceLocator.Register(this);
 
         #region Public Methods & Properties
 

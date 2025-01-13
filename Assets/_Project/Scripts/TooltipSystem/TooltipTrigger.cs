@@ -17,7 +17,7 @@ namespace TooltipSystem
 
         protected virtual void Awake() => FindSource();
 
-        protected virtual void Start() => _tooltip = ServiceLocator.Get<TooltipView>();
+        protected virtual void Start() => _tooltip = LibbsServiceLocator.Get<TooltipView>();
 
         protected virtual void FindSource()
         {

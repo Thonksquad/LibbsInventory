@@ -48,7 +48,7 @@ namespace TooltipSystem
         private void Awake()
         {
             _rootCanvas = transform.root.GetComponentInChildren<RectTransform>();
-            ServiceLocator.Register(this);
+            LibbsServiceLocator.Register(this);
             ResetAnchors();
             HideTooltip(instant: true);
         }
