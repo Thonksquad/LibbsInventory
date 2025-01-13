@@ -7275,6 +7275,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2803334491983800552, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334492110505464, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334492110505464, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334492110505464, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2803334492110505464, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334493032694168, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334493032694168, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803334493032694168, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2803334493032694168, guid: be763868921d442439c966a76886b223, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3900551369710599517, guid: be763868921d442439c966a76886b223, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8498,6 +8534,42 @@ PrefabInstance:
     - target: {fileID: 6999970582080397875, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970582118720737, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970582787970811, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970582787970811, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970582787970811, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6999970582787970811, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970583299950238, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970583299950238, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999970583299950238, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6999970583299950238, guid: 2205492d0341afa4f8fa095675c41be3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
