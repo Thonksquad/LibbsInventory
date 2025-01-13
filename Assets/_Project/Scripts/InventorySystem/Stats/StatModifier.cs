@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using System;
 using UnityEngine;
 
@@ -12,14 +12,14 @@ namespace InventorySystem
     }
 
     [Serializable]
-    [InlineProperty]
+
     public class StatModifier
     {
-        [HorizontalGroup(140), HideLabel]
+
         [SerializeField] private Stat _stat;
-        [HorizontalGroup(40), HideLabel]
+
         [SerializeField] private float _value;
-        [HorizontalGroup, HideLabel]
+
         [SerializeField] private StatModType _modType;
 
         public Stat Stat => _stat;

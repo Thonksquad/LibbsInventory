@@ -1,5 +1,4 @@
 using InventorySystem;
-using Sirenix.OdinInspector;
 using Utilities.Meter;
 
 namespace CombatSystem
@@ -10,8 +9,6 @@ namespace CombatSystem
         public Stat MaxHP;
         
         // TODO: have a reference to the player stats, buffs/debuffs, which routes the combat calculations
-
-        [Button]
         public void Damage(int amount)
         {
             // TODO: take into account damage source,
@@ -21,7 +18,6 @@ namespace CombatSystem
             // then return a DamageResult so they know how much dmg they dealt - for stat tracking
         }
 
-        [Button]
         public void Heal(int amount)
         {
             // TODO: take into account healing source,

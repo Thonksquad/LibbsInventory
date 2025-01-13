@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System;
 using TMPro;
 using TooltipSystem;
@@ -14,9 +13,7 @@ namespace AbilitySystem
         public static event Action<AbilitySlot> Pressed;
         public static event Action<AbilitySlot> UpgradePressed;
 
-        [OnValueChanged(nameof(OnAbilityChanged))]
         [SerializeField] private Ability _ability;
-        [OnValueChanged(nameof(OnKeyCodeChanged))]
         [SerializeField] private KeyCode _key;
 
         [Header("UI References")]

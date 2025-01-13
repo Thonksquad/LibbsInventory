@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System.Text;
 using TooltipSystem;
 using UnityEngine;
@@ -11,10 +10,8 @@ namespace AbilitySystem
     {
         #region Inspector Properties
 
-        [PreviewField(Alignment = ObjectFieldAlignment.Center, Height = 120f)]
         public Sprite Icon;
 
-        [DetailedInfoBox("Preview Tooltip", "@GetTooltip().Text", infoMessageType: InfoMessageType.None)]
         [Tooltip("If the Display Name is different than the Asset Name")]
         [SerializeField] private string _nameOverride;
 

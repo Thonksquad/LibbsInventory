@@ -1,4 +1,4 @@
-﻿using Sirenix.OdinInspector;
+﻿
 using System;
 using UnityEngine;
 using Utilities.MessageSystem;
@@ -6,13 +6,12 @@ using Utilities.MessageSystem;
 namespace InventorySystem
 {
     [Serializable]
-    [InlineProperty]
+
     public class ItemEntry
     {
         public event Action<Item> ItemChanged;
         public event Action<int> QuantityChanged;
 
-        [HorizontalGroup, HideLabel]
         [SerializeField] private Item _item;
         public Item Item
         {
@@ -27,7 +26,6 @@ namespace InventorySystem
             }
         }
 
-        [HorizontalGroup(width: 40), HideLabel]
         [SerializeField] private int _quantity = 1;
         public int Quantity
         {

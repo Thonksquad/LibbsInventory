@@ -1,4 +1,4 @@
-﻿using Sirenix.OdinInspector;
+﻿
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,20 +6,19 @@ using UnityEngine;
 namespace InventorySystem
 {
     [Serializable]
-    [InlineProperty]
+
     public class StatEntry
     {
         public event Action<float> ValueChanged;
 
-        [HorizontalGroup, HideLabel]
+
         [SerializeField] private Stat _stat;
 
         // intrinsic value, level-based typically
-        [HorizontalGroup(40), HideLabel]
+
         [SerializeField] private float _baseValue;
 
         // buffs, debuffs, equipment, etc.
-        [ReadOnly]
         [SerializeField] protected List<StatModifier> _statModifiers = new();
 
         protected bool _isDirty = true;

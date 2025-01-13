@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +13,7 @@ namespace InventorySystem
         public static event Action<InventoryView> Closed;
 
         [Header("Settings")]
-        [SerializeField, ReadOnly] private Inventory _inventory;
+        [SerializeField] private Inventory _inventory;
         public bool IsPlayerInventory => _inventory.IsPlayerInventory;
 
         [Header("References")]
@@ -70,7 +70,6 @@ namespace InventorySystem
 
         #region Adding & Removing ItemSlots
 
-        [Button]
         protected void AdjustSize(int size)
         {
 #if UNITY_EDITOR
@@ -117,7 +116,6 @@ namespace InventorySystem
 
         private void GetItemSlots() => _itemSlots = _itemSlotsParent.GetComponentsInChildren<ItemEntryView>(includeInactive: true);
 
-        [Button]
         private void SyncItems()
         {
             // should be same size, unless we were manually adjusting via AdjustSize in the editor
@@ -138,7 +136,7 @@ namespace InventorySystem
                 OpenInventory();
         }
 
-        [ButtonGroup]
+
         public void OpenInventory()
         {
             if (_confirmationDialog.IsActive) return;
@@ -149,7 +147,7 @@ namespace InventorySystem
             IsOpen = true;
         }
 
-        [ButtonGroup]
+
         public void CloseInventory()
         {
             if (_confirmationDialog.IsActive) return;

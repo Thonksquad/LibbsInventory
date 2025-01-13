@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -27,7 +26,7 @@ namespace InventorySystem
         private Tween _placeItemTween;
 
         [Header("Internal Data")]
-        [SerializeField, ReadOnly] private ItemEntry _entry;
+        [SerializeField] private ItemEntry _entry;
 
         public ItemEntry Entry => _entry;
         public Item Item => _entry.Item;

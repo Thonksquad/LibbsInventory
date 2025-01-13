@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -80,7 +80,6 @@ namespace Utilities.UI
 
         #region Animations
 
-        [Button]
         private void ShowDialog(bool withBypass = false)
         {
             _confirmButton.interactable = true;
@@ -96,7 +95,6 @@ namespace Utilities.UI
             IsActive = true;
         }
 
-        [Button]
         private void CloseDialog()
         {
             _confirmButton.interactable = false;

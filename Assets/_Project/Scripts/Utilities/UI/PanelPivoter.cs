@@ -1,5 +1,5 @@
 using DG.Tweening;
-using Sirenix.OdinInspector;
+
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,32 +11,24 @@ namespace Utilities.UI
         private RectTransform RectTransform => _rectTransform != null ? _rectTransform : _rectTransform = GetComponent<RectTransform>();
 
         [SerializeField, HideInInspector] protected Vector2 _defaultPivotPos = Vector2.up;
-        [OnValueChanged(nameof(OnDefaultAdjusted))]
-        [SerializeField, FoldoutGroup("Settings")] protected TextAnchor _defaultPivot = TextAnchor.UpperLeft;
-        [SerializeField, FoldoutGroup("Settings")] protected Ease _slideEase = Ease.Linear; // Or InOut options
-        [SerializeField, FoldoutGroup("Settings")] protected bool _isSpeedBased = false;
-        [SerializeField, FoldoutGroup("Settings"), LabelText("@SlideText"), LabelWidth(150), Min(0.01f)] protected float _slideDuration = 0.5f;
-        [FoldoutGroup("Callbacks")] public UnityEvent OnDoneSliding;
-        [FoldoutGroup("Callbacks")] public UnityEvent OnResetToDefault;
+
+        [SerializeField] protected TextAnchor _defaultPivot = TextAnchor.UpperLeft;
+        [SerializeField] protected Ease _slideEase = Ease.Linear; // Or InOut options
+        [SerializeField ] protected bool _isSpeedBased = false;
+        [SerializeField] protected float _slideDuration = 0.5f;
+        public UnityEvent OnDoneSliding;
+        public UnityEvent OnResetToDefault;
 
         private string SlideText => _isSpeedBased ? "Slide Speed (units/sec)" : "Slide Duration (sec)";
 
         private Tween _tween;
         private Vector2 _targetPivot;
-
-        [Button("    Slide Up    ", ButtonAlignment = 0.5f, Stretch = false, Icon = SdfIconType.ArrowUp)]
         private void SlideUp() => SlideUp(1);
 
-        [ButtonGroup, Button(Icon = SdfIconType.ArrowLeft)]
         private void SlideLeft() => SlideLeft(1);
 
-        [ButtonGroup, Button("Reset", Icon = SdfIconType.ArrowCounterclockwise)]
         private void ResetPivot() => ResetToDefault();
-
-        [ButtonGroup, Button(Icon = SdfIconType.ArrowRight, IconAlignment = IconAlignment.RightOfText)]
         private void SlideRight() => SlideRight(1);
-
-        [Button("   Slide Down   ", ButtonAlignment = 0.5f, Stretch = false, Icon = SdfIconType.ArrowDown)]
         private void SlideDown() => SlideDown(1);
         
         public Tween SlideTo(Vector2 pivot, bool isLocal = false, bool instant = false)

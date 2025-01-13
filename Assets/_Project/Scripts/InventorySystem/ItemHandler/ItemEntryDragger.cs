@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -23,8 +22,8 @@ namespace InventorySystem
         public ItemEntry Entry => _entry;
 
         [Header("Dragging References")]
-        [SerializeField, Required] private Image _icon;
-        [SerializeField, Required] private TextMeshProUGUI _qtyText;
+        [SerializeField] private Image _icon;
+        [SerializeField] private TextMeshProUGUI _qtyText;
         private Transform _draggedTransform;
 
         [Header("Juice")]
@@ -38,7 +37,7 @@ namespace InventorySystem
         private ConfirmationDialog _confirmationDialog;
 
         [Header("What's In Hand")]
-        [SerializeField, ReadOnly] private ItemEntry _entry = new();
+        [SerializeField] private ItemEntry _entry = new();
         private ItemEntryView _returnSlot;
         private bool _isPartialCarry = false;
         private bool _isCarrying = false;

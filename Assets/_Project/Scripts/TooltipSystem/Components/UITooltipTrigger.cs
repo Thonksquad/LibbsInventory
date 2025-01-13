@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Utilities;
@@ -7,10 +7,10 @@ namespace TooltipSystem
 {
     public class UITooltipTrigger : TooltipTrigger, IPointerEnterHandler, IPointerMoveHandler, IPointerClickHandler, IPointerExitHandler
     {
-        [SerializeField, PropertyOrder(1)] protected TooltipAction _onPointerEnter = TooltipAction.Show;
-        [SerializeField, PropertyOrder(1)] protected TooltipAction _onPointerMove = TooltipAction.Show;
-        [SerializeField, PropertyOrder(1)] protected TooltipAction _onPointerExit = TooltipAction.Hide;
-        [SerializeField, PropertyOrder(1)] protected TooltipAction _onPointerClick = TooltipAction.Hide;
+        [SerializeField] protected TooltipAction _onPointerEnter = TooltipAction.Show;
+        [SerializeField] protected TooltipAction _onPointerMove = TooltipAction.Show;
+        [SerializeField] protected TooltipAction _onPointerExit = TooltipAction.Hide;
+        [SerializeField] protected TooltipAction _onPointerClick = TooltipAction.Hide;
 
         public virtual void OnPointerEnter(PointerEventData eventData) =>
             HandleTooltipAction(_onPointerEnter);

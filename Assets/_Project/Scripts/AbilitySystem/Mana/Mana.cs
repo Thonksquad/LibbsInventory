@@ -1,5 +1,4 @@
 using InventorySystem;
-using Sirenix.OdinInspector;
 using Utilities.Meter;
 
 namespace AbilitySystem
@@ -13,14 +12,12 @@ namespace AbilitySystem
 
         public bool CanSpendMana(int amount) => amount >= Meter.Value;
 
-        [Button]
         public void UseMana(int amount)
         {
             Meter.Decrease(amount);
             // do anything with this for stat tracking?
         }
 
-        [Button]
         public void RestoreMana(int amount)
         {
             // calculate with any buffs/debuffs that might change the amount

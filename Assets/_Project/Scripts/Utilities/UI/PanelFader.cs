@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Sirenix.OdinInspector;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,28 +11,25 @@ namespace Utilities.UI
         [SerializeField, HideInInspector] private CanvasGroup _canvasGroup;
         private CanvasGroup CanvasGroup => _canvasGroup != null ? _canvasGroup : _canvasGroup = GetComponent<CanvasGroup>();
 
-        [SerializeField, LabelWidth(200)] protected bool _hideOnStart = true;
+        [SerializeField] protected bool _hideOnStart = true;
 
-        [InlineButton(nameof(SetShownAlpha), "Set")]
-        [InlineButton(nameof(GetShownAlpha), "Get")]
-        [FoldoutGroup("Show Settings"), SerializeField, Range(0, 1)] protected float _shownAlpha = 1f;
-        [FoldoutGroup("Show Settings"), SerializeField] protected float _showDuration = 0.5f;
-        [FoldoutGroup("Show Settings"), SerializeField] protected Ease _showEase = Ease.OutQuint;
-        [FoldoutGroup("Show Settings"), SerializeField, LabelWidth(200)] protected bool _interactableWhenShown = true;
-        [FoldoutGroup("Show Settings"), SerializeField, LabelWidth(200)] protected bool _blockRaycastsWhenShown = true;
-        [FoldoutGroup("Show Settings")] public UnityEvent OnStartShowing;
-        [FoldoutGroup("Show Settings")] public UnityEvent OnShowComplete;
 
-        [InlineButton(nameof(SetHiddenAlpha), "Set")]
-        [InlineButton(nameof(GetHiddenAlpha), "Get")]
-        [FoldoutGroup("Hide Settings"), SerializeField, Range(0, 1)] protected float _hiddenAlpha = 0f;
-        [FoldoutGroup("Hide Settings"), SerializeField] protected float _hideDuration = 0.5f;
-        [FoldoutGroup("Hide Settings"), SerializeField] protected Ease _hideEase = Ease.OutQuint;
-        [FoldoutGroup("Hide Settings"), SerializeField, LabelWidth(200)] protected bool _setInactiveWhenHidden = false;
-        [FoldoutGroup("Hide Settings"), SerializeField, LabelWidth(200)] protected bool _interactableWhenHidden = false;
-        [FoldoutGroup("Hide Settings"), SerializeField, LabelWidth(200)] protected bool _blockRaycastsWhenHidden = false;
-        [FoldoutGroup("Hide Settings")] public UnityEvent OnStartHiding;
-        [FoldoutGroup("Hide Settings")] public UnityEvent OnHideComplete;
+        [SerializeField, Range(0, 1)] protected float _shownAlpha = 1f;
+        [SerializeField] protected float _showDuration = 0.5f;
+        [SerializeField] protected Ease _showEase = Ease.OutQuint;
+        [SerializeField] protected bool _interactableWhenShown = true;
+        [SerializeField] protected bool _blockRaycastsWhenShown = true;
+        public UnityEvent OnStartShowing;
+        public UnityEvent OnShowComplete;
+
+        [SerializeField] protected float _hiddenAlpha = 0f;
+        [SerializeField] protected float _hideDuration = 0.5f;
+        [SerializeField] protected Ease _hideEase = Ease.OutQuint;
+        [SerializeField] protected bool _setInactiveWhenHidden = false;
+        [SerializeField] protected bool _interactableWhenHidden = false;
+        [SerializeField] protected bool _blockRaycastsWhenHidden = false;
+        public UnityEvent OnStartHiding;
+        public UnityEvent OnHideComplete;
 
         private Tween _tween;
 
@@ -46,7 +42,6 @@ namespace Utilities.UI
                 Hide(instant: true);
         }
 
-        [Button(DisplayParameters = false)]
         public Tween Show() => Show(false);
         public Tween Show(bool restart)
         {
@@ -65,7 +60,6 @@ namespace Utilities.UI
                 .OnComplete(OnShowComplete.Invoke);
         }
 
-        [Button(DisplayParameters = false)]
         public Tween Hide() => Hide(false);
         public Tween Hide(bool instant)
         {

@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using Utilities;
@@ -9,41 +8,36 @@ namespace TooltipSystem
     [RequireComponent(typeof(CanvasGroup))]
     public class TooltipView : MonoBehaviour
     {
-        [FoldoutGroup("References")]
+
         [SerializeField] private CanvasGroup _canvasGroup;
 
-        [FoldoutGroup("References")]
+
         [SerializeField] private RectTransform _background;
 
-        [FoldoutGroup("References")]
+    
         [SerializeField] private TMP_Text _text;
 
-        [FoldoutGroup("Settings"), OnValueChanged(nameof(Refresh))]
         [SerializeField] private Vector2 _padding = new(15, 15);
 
         [Tooltip("Don't pick Flush")]
-        [FoldoutGroup("Settings"), OnValueChanged(nameof(UpdateTextAlignment))]
         [SerializeField] private HorizontalAlignmentOptions _horizontalAlignment = HorizontalAlignmentOptions.Left;
 
-        [FoldoutGroup("Settings"), OnValueChanged(nameof(ResetAnchors))]
         [SerializeField] private TextAnchor _anchor = TextAnchor.LowerRight;
 
-        [FoldoutGroup("Settings")]
         [SerializeField] private float _hoverDelay = 0.4f;
 
-        [FoldoutGroup("Settings")]
         [SerializeField] private float _fadeIn = 0.15f;
 
-        [FoldoutGroup("Settings")]
+
         [SerializeField] private float _fadeOut = 0.15f;
 
-        [FoldoutGroup("Settings")]
+
         [SerializeField] private bool _followCursor = true;
 
 #if UNITY_EDITOR
 #pragma warning disable 0414 // annoying "unused variable" warning
         [TextArea(2, 5)]
-        [FoldoutGroup("Settings"), OnValueChanged(nameof(SetText))]
+
         [SerializeField] private string _testYourTooltipHere = "<color=\"green\">Hello!</color>\nThis is a <u>Tooltip</u>.\n<i>Neat</i>, huh?";
 #pragma warning restore
 #endif

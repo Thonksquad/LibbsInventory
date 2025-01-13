@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,7 +8,7 @@ namespace Utilities.Meter
     /// <summary>
     /// This is the UI that listens to changes from Meter. A Health Bar, Mana Bar, XP, Stamina, etc.
     /// </summary>
-    public class MeterView : SerializedMonoBehaviour
+    public class MeterView : MonoBehaviour
     {
         [Header("Target")]
         [SerializeField] private MeterController _source;

@@ -1,5 +1,4 @@
 using DG.Tweening;
-using Sirenix.OdinInspector;
 using System;
 using TMPro;
 using UnityEngine;
@@ -87,7 +86,6 @@ namespace InventorySystem
             _isShown = true;
         }
 
-        [Button]
         public void HideMenu(bool forced = false)
         {
             if (!_isShown && !forced) return;

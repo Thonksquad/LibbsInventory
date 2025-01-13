@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using System;
 using System.Collections;
 using System.Linq;
@@ -30,7 +30,6 @@ namespace CursorSystem
 
         public CursorType CurrentCursorType => _currentCursorType;
 
-        [Button]
         public void ChangeCursor(CursorType cursorType)
         {
             var cursorData = _cursors.FirstOrDefault(c => c.CursorType == cursorType);
@@ -38,7 +37,6 @@ namespace CursorSystem
             else ResetCursor();
         }
 
-        [ButtonGroup]
         public void ResetCursor()
         {
             if (_animation != null) StopCoroutine(_animation);
@@ -46,10 +44,9 @@ namespace CursorSystem
             _currentCursorType = CursorType.Default;
         }
 
-        [ButtonGroup, HideIf("_isVisible")]
+
         public void ShowCursor() => _isVisible = Cursor.visible = true;
 
-        [ButtonGroup, ShowIf("_isVisible")]
         public void HideCursor() => _isVisible = Cursor.visible = false;
         
         //Texture2D blankCursor = new Texture2D(1, 1, TextureFormat.ARGB32, false);
@@ -95,19 +92,13 @@ namespace CursorSystem
     }
 
     [Serializable]
-    [InlineProperty]
     public class CursorData
     {
-        [HorizontalGroup, HideLabel]
         public CursorType CursorType;
 
-        [HorizontalGroup, HideLabel]
         public Vector2 Hotspot;
 
-        [PreviewField(Alignment = ObjectFieldAlignment.Left)]
         public Texture2D[] Textures = new Texture2D[1];
-
-        [ShowIf(nameof(IsAnimated)), Tooltip("Time between each cursor image for animating")]
         public float TimeBetweenFrames = 0.2f;
 
         public bool IsAnimated => Textures.Length > 1;

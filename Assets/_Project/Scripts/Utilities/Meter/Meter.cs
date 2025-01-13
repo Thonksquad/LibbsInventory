@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
-using Sirenix.OdinInspector;
+
 
 namespace Utilities.Meter
 {
-    [Serializable, InlineProperty]
+    [Serializable]
     public class Meter
     {
         public event Action Refilled;
@@ -19,7 +19,6 @@ namespace Utilities.Meter
             Value = value;
         }
 
-        [HorizontalGroup, PropertyRange(0, "@_maximum"), HideLabel, LabelWidth(50)]
         [SerializeField] private int _value = 100;
         public int Value
         {
@@ -45,7 +44,6 @@ namespace Utilities.Meter
             }
         }
 
-        [HorizontalGroup(60), LabelText("/"), LabelWidth(8)]
         [SerializeField, Min(1)] private int _maximum = 100;
         public int Maximum
         {

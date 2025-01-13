@@ -1,4 +1,4 @@
-using Sirenix.OdinInspector;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +10,9 @@ namespace InventorySystem
     [Serializable]
     public class Inventory
     {
-        [SerializeField, ReadOnly] private bool _isPlayerInventory = false;
-        [OnValueChanged(nameof(AdjustSize))]
-        [SerializeField, ReadOnly] private int _inventorySize = 15;
-        [SerializeField, ReadOnly, ListDrawerSettings(NumberOfItemsPerPage = 5)] private ItemEntry[] _items;
+        [SerializeField] private bool _isPlayerInventory = false;
+        [SerializeField] private int _inventorySize = 15;
+        [SerializeField] private ItemEntry[] _items;
 
         public bool IsPlayerInventory => _isPlayerInventory;
         public int Size => _inventorySize;
