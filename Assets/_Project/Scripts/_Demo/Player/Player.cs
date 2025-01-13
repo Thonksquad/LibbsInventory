@@ -1,5 +1,4 @@
-using AbilitySystem;
-using CombatSystem;
+
 using InventorySystem;
 using UnityEngine;
 using Utilities.Cooldown;
@@ -9,8 +8,6 @@ namespace SystemsDemo
 {
     public class Player : MonoBehaviour
     {
-        public Health Health;
-        public Mana Mana;
         public StatSheet StatSheet;
         public InventoryController Inventory;
 
@@ -50,6 +47,7 @@ namespace SystemsDemo
                 return;
             }
 
+            /*
             foreach (var statMod in consumable.StatModifiers)
             {
                 if (statMod.Stat == Health.CurrentHP)
@@ -61,6 +59,7 @@ namespace SystemsDemo
                 else if (statMod.Stat == Mana.MaxMana)
                     Mana.IncreaseMaxMana((int)statMod.Value);
             }
+            */
 
             Messenger.SendMessage(new InventoryMessage(entry.Item, entry.Quantity, InventoryEvent.ConsumableUseSuccess));
             entry.RemoveQuantity(1);

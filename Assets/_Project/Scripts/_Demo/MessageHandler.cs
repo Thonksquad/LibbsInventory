@@ -1,4 +1,4 @@
-﻿using AbilitySystem;
+﻿
 using InventorySystem;
 using UnityEngine;
 using Utilities.MessageSystem;
@@ -13,13 +13,13 @@ namespace SystemsDemo
         private void OnEnable()
         {
             Messenger.AddListener<InventoryMessage>(OnInventoryMessage);
-            Messenger.AddListener<AbilityMessage>(OnAbilityMessage);
+
         }
 
         private void OnDisable()
         {
             Messenger.RemoveListener<InventoryMessage>(OnInventoryMessage);
-            Messenger.RemoveListener<AbilityMessage>(OnAbilityMessage);
+
         }
 
         private void OnInventoryMessage(InventoryMessage message)
@@ -34,25 +34,6 @@ namespace SystemsDemo
                     break;
                 default:
                     Debug.Log($"[{message.Event}] {message.Item.Name} ({message.Quantity})");
-                    break;
-            }
-        }
-
-        private void OnAbilityMessage(AbilityMessage message)
-        {
-            switch (message.Event)
-            {
-                //case AbilityEvent.None:
-                //    break;
-                //case AbilityEvent.SuccessfulCast:
-                //    break;
-                //case AbilityEvent.NotEnoughMana:
-                //    break;
-                //case AbilityEvent.OnCooldown:
-                //    Debug.Log("On Cooldown");
-                //    break;
-                default:
-                    Debug.Log($"[{message.Event}] {message.Ability.Name}");
                     break;
             }
         }
