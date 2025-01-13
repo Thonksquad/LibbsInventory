@@ -21,7 +21,7 @@ namespace AbilitySystem
 
         private void Start()
         {
-            _playerMana = FindObjectOfType<Mana>();
+            _playerMana = FindFirstObjectByType<Mana>();
         }
 
         private void OnAbilityPressed(AbilitySlot slot)
